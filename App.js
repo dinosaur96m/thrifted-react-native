@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // import views
-import Browse from './screens/Browse';
-import Profile from './screens/Profile';
+import Browse from './screens/items/Browse';
+import Profile from './screens/profile/Profile';
 
 // from ReactNav docs: "createNativeStackNavigator is a function that returns an object containing 2 properties: Screen and Navigator."
 const Stack = createNativeStackNavigator();

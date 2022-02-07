@@ -5,6 +5,6 @@ import { textShadowColor } from 'react-native/Libraries/Components/View/ReactNat
 export default function Browse () {
 
     return(
-        <Text>This is the page for browsing</Text>
+        <Text>Browse Items here</Text>
     )
 }
