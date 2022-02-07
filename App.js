@@ -1,14 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-// import views
-import Browse from './screens/items/Browse';
-import Profile from './screens/profile/Profile';
+// import item views
+import Browse from './screens/items/Browse'
+import EditItem from './screens/items/EditItem'
+import Item from './screens/items/Item'
+import NewItem from './screens/items/NewItem'
+
+// import profile views
+import Cart from './screens/profile/Cart'
+import Profile from './screens/profile/Profile'
+import Store from './screens/profile/Store'
+
 
 // from ReactNav docs: "createNativeStackNavigator is a function that returns an object containing 2 properties: Screen and Navigator."
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator()
 
 
 export default function App() {
