@@ -6,8 +6,10 @@ export default function Profile ({navigation}) {
 
     return(
         <View>
-        <Text>This is the Profile Page</Text>
-        {/* <Button title="Store" onPress={navigation.navigate('Store')}/> */}
+            <Text>This is the Profile Page</Text>
+            <Button 
+            title="My Store"
+            onPress={ () => navigation.navigate('Store')}/>
         </View>
     )
 }

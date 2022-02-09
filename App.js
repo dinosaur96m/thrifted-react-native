@@ -2,8 +2,8 @@ import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
+import Home from './screens/Home'
 // import item screens
 import Browse from './screens/items/Browse'
 import EditItem from './screens/items/EditItem'
@@ -20,29 +20,27 @@ import { Button } from 'react-native-web'
 // from ReactNav docs: "createNativeStackNavigator is a function that returns an object containing 2 properties: Screen and Navigator."
 const Stack = createNativeStackNavigator()
 
-const Tab = createBottomTabNavigator()
-
-
-
-export default function App({navigation}) {
+export default function App() {
   return (
+    <>
+    
     <NavigationContainer>
         {/* note from React Nav Docs:  */}
         {/* Sometimes we might want to pass additional props to a screen. We can do that with 2 approaches:
 
         1. Use React context and wrap the navigator with a context provider to pass data to the screens (recommended). */}
-      <Tab.Navigator>
-         {/* Items */}
-        <Tab.Screen name="Browse" component={Browse}/>
-        <Tab.Screen name="EditItem" component={EditItem}/>
-        <Tab.Screen name="Item" component={Item}/>
-        <Tab.Screen name="NewItem" component={NewItem}/>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
+        {/* Items */}
+        <Stack.Screen name="EditItem" component={EditItem}/>
+        <Stack.Screen name="Item" component={Item}/>
+        <Stack.Screen name="NewItem" component={NewItem}/>
         {/* Profile */}
-        <Tab.Screen name="Cart" component={Cart}/>
-        <Tab.Screen name="Profile" component={Profile}/>
-        <Tab.Screen name="Store" component={Store}/>
-      </Tab.Navigator>
+        <Stack.Screen name="Cart" component={Cart}/>
+        <Stack.Screen name="Store" component={Store}/>
+      </Stack.Navigator>
     </NavigationContainer>
+    </>
   );
 }
 
