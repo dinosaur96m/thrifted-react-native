@@ -9,7 +9,7 @@ export default function Browse ({navigation}) {
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>Browse Items here</Text>
             <Button
-            title="Go to item details"
+            title="Item Details"
             onPress={() => navigation.navigate('Item')}
             />
         </View>

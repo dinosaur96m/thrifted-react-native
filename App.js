@@ -34,7 +34,7 @@ export default function App() {
         {/* Items */}
         <Stack.Screen name="EditItem" component={EditItem}/>
         <Stack.Screen name="Item" component={Item}/>
-        <Stack.Screen name="NewItem" component={NewItem}/>
+        <Stack.Screen name="New Item" component={NewItem}/>
         {/* Profile */}
         <Stack.Screen name="Cart" component={Cart}/>
         <Stack.Screen name="Store" component={Store}/>

@@ -8,8 +8,16 @@ export default function Profile ({navigation}) {
         <View>
             <Text>This is the Profile Page</Text>
             <Button 
-            title="My Store"
-            onPress={ () => navigation.navigate('Store')}/>
+                title="My Store"
+                onPress={ () => navigation.navigate('Store')}/>
+            <Button 
+                title="My Cart"
+                onPress={() => navigation.navigate('Cart')}
+            />
+            <Button 
+                title="Sell"
+                onPress={() => navigation.navigate('New Item')}
+            />
         </View>
     )
 }
